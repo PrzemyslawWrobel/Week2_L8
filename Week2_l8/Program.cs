@@ -6,7 +6,9 @@ namespace Week2_l8
     {
         static void Main(string[] args)
         {
-            Zadanie_8();
+            Zadanie_10();
+            //Zadanie_9();
+            //Zadanie_8();
             //Zadanie_7();
             //Zadanie_6();
             //Zadanie_5();
@@ -14,6 +16,46 @@ namespace Week2_l8
             //Zadanie_3();
             //Zadanie_2();
             //Zadanie_1();
+        }
+
+        private static void Zadanie_10()
+        {
+            Console.WriteLine("Give first number: ");
+            int first = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Give second number: ");
+            int second = int.Parse(Console.ReadLine());
+
+            int i = first;
+
+            while (i % second != 0)
+            {
+                i += first;
+
+            }
+
+            Console.WriteLine($"Least common multiple: {i}");
+
+        }
+
+        private static void Zadanie_9()
+        {
+            Console.Write("Wprowadź liczbę dziesiętną: ");
+            int numberToChange = Int32.Parse(Console.ReadLine());
+            string changedRev = "";
+            string changed = "";
+
+            while (numberToChange > 0)
+            {
+                changedRev += (numberToChange % 2);
+                numberToChange /= 2;
+            }
+
+            for (int i = changedRev.Length - 1; i >= 0; i--)
+            {
+                changed += changedRev[i];
+            }
+            Console.WriteLine("Reprezentacja binarna liczby to: " + changed);
         }
 
         private static void Zadanie_8()

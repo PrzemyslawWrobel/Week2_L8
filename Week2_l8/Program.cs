@@ -6,8 +6,9 @@ namespace Week2_l8
     {
         static void Main(string[] args)
         {
+            Zadanie_8();
             //Zadanie_7();
-            Zadanie_6();
+            //Zadanie_6();
             //Zadanie_5();
             //Zadanie_4();
             //Zadanie_3();
@@ -15,13 +16,22 @@ namespace Week2_l8
             //Zadanie_1();
         }
 
+        private static void Zadanie_8()
+        {
+            Console.WriteLine("Program odwraca wpisany ciąg znaków np ABC i wypisuje CBA");
 
-       
+            string str = Console.ReadLine();
+            char[] characters = str.ToCharArray();
+            int a = characters.Length;
+            Console.Write("Odwrócony string to: ");
+            for (int i = a; i > 0; i--)
+            {
+               int  b = i - 1;
+               char m = characters[b];
+               Console.Write(m);
+            }
 
-
-
-
-        
+        }
 
         private static void Zadanie_7()
         {
@@ -60,8 +70,8 @@ namespace Week2_l8
             double suma;
             for (int i = 1; i < 20; i++)
             {
-                suma = i + i * 0.5 + i * (1 / 3) + i * 0.25;
-                Console.WriteLine(suma);
+                suma = i + (i /2 )+ (i / 3) + (i / 4);
+                Console.WriteLine(suma);              
             }
         }
 
